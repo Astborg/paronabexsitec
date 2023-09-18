@@ -20,8 +20,8 @@ let productGrid = document.querySelector('.grid')
     
   
   //knappar med tömningsfunktion och gör ändringar i lagret
-    productGrid.innerHTML += `<button onclick="emptyCart()">Töm ändringar</button>`
-    productGrid.innerHTML += `<button onclick="checkout(id)">Ändra i lagret</button>`
+    productGrid.innerHTML += `<button class="btn1" onclick="emptyCart()">Töm ändringar</button>`
+    productGrid.innerHTML += `<button class="btn2" onclick="checkout(id)">Ändra i lagret</button>`
 
   
 

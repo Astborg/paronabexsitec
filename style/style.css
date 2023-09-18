@@ -304,6 +304,7 @@ label{
         display: flex;
         flex-direction: column; 
         justify-content: center; 
+       
         
          
     }
@@ -354,6 +355,13 @@ label{
     .footer{
         height: 20vw; 
         padding-bottom: 2vw; 
+    }
+    .btn1{
+        margin-bottom: 20vw; 
+        margin-top: 50vw;
+    }
+    .btn2{
+         margin-top: 55vw; 
     }
 }
 
