@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "animejs": "^3.2.1",
-    "bounce.js": "^0.8.2"
+    "animejs": "^3.2.1"
   }
 }
