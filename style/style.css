@@ -1,4 +1,7 @@
 
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
 .square{
     width: 80vw;
     height: 100%; 
@@ -122,7 +125,8 @@ button{
     border-radius: 0.7vw;
     border: none; 
     padding: 0.5vw; 
-    background-color: rgb(22, 214, 22); 
+    background-color: rgb(11, 156, 11);
+    color: white; 
     float: right; 
     margin-right: 6vw; 
     margin-top: 5vw; 
@@ -142,7 +146,7 @@ button{
     font-weight: bold;
 }
 button:hover{
-    background-color: rgb(241, 168, 141); 
+    background-color: rgb(171, 249, 171); 
 }
 button:active{
     transform: scale(0.9)
@@ -193,6 +197,7 @@ p{
     border-radius: 5px; 
     padding: 5px; 
     border-color: rgb(187, 185, 185);
+    margin-bottom: 5px; 
 }
 .lagretidag{
     display: flex; 
@@ -209,13 +214,14 @@ p{
 .idag{
     margin: 5px; 
 }
-.select, .select1{
+.select, .select1, select{
     display: flex;
     flex-direction: row; 
     padding: 5px; 
     width: 200px; 
     border-radius: 5px; 
     border-color: rgb(187, 185, 185);
+    margin-bottom: 5px; 
 }
 .pris{
     
@@ -224,6 +230,10 @@ p{
 #home{
     text-decoration: none; 
     color: black;
+}
+label{
+    margin-right: 20px; 
+    margin-bottom: 5px; 
 }
 @keyframes mymove {
     from {top: 0vw;}
