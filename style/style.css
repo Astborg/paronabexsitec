@@ -29,14 +29,16 @@ li{
    cursor: pointer; 
  
 }
-li:hover{
-    background-color: orangered; 
-    border-radius: 15px;
-    transform: scale(1.2);
-    box-shadow: 1px 1px 1px 1px rgba(244, 172, 148, 0.776)
+#home:hover{
+    color: rgb(11, 156, 11);
+    
 }
 li:active{
     transform: scale(0.98)
+}
+#home{
+    text-decoration: none; 
+    color: black
 }
 .change{ 
     float: right; 
@@ -138,7 +140,7 @@ button{
     border-radius: 0.7vw;
     border: none; 
     padding: 0.5vw; 
-    background-color: orangered; 
+    background-color: rgb(11, 156, 11); 
     float: right; 
     margin-right: 6vw; 
     margin-top: 5vw; 
@@ -227,10 +229,7 @@ p{
     
     box-shadow: 2px 2px 2px 2px rgb(221, 220, 220)
 }
-#home{
-    text-decoration: none; 
-    color: black;
-}
+
 label{
     margin-right: 20px; 
     margin-bottom: 5px; 
