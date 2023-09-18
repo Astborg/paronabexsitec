@@ -14,7 +14,7 @@ async function products(){
     Object.entries(data).forEach(([key, value]) => 
         lagretidag.innerHTML += `
         <div class="produkt-container">
-        <p>Produkt: ${key}</p>
+        <p class="rubrik">Produkt: ${key}</p>
         <p> Frankfurt: ${value.Frankfurt}</p>
         <p> Cupertino: ${value.Cupertino}</p> 
         <p> Norrköping: ${value.Norrköping}</p>
