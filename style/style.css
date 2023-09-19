@@ -115,7 +115,7 @@ img:hover{
 }
 .pris{
     width: 26vw; 
-    height: 10vw; 
+    height: 20vw; 
     padding: 1vw; 
     background-color: rgba(255, 255, 255, 0.708);
     border-radius: 0.8vw;
@@ -231,7 +231,7 @@ p{
 .pris{
     
     box-shadow: 2px 2px 2px 2px rgb(221, 220, 220);
-    height:25vh
+    height:40vh
 }
 
 label{
