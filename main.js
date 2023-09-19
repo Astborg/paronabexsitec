@@ -94,6 +94,7 @@ async function addTodoToFirebase() {
     const baseURL = 'https://todoparon-default-rtdb.europe-west1.firebasedatabase.app/'
     const url = baseURL + 'todo.json'
     const response = await fetch(url)
+    console.log(response)
     let data = await response.json()
     console.log(data)
 
@@ -121,7 +122,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     addTodo() 
-    addTodoToFirebase()
+    addTodoToFirebase(input)
     
 })
 function addTodo(todo){
