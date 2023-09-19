@@ -78,6 +78,7 @@ async function renderTodo(){
     const response = await fetch(url)
     let data = await response.json()
     console.log(data)
+    
 
     Object.entries(data).forEach(([key, value]) => 
       todo2.innerHTML += `
@@ -97,12 +98,14 @@ async function addTodoToFirebase() {
     console.log(response)
     let data = await response.json()
     console.log(data)
-
+   console.log(input.value)
+    
+    
 
     // Send the updated data back to Firebase
     const updateResponse = await fetch(url, {
       method: 'PUT', 
-      body: input,
+      body: JSON.stringify(input.value),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -122,13 +125,14 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     addTodo() 
-    addTodoToFirebase(input)
+    addTodoToFirebase()
     
 })
 function addTodo(todo){
     let todoText = input.value 
+    console.log(todoText)
     if(todo){
-        todoText = todo.text
+    
         
     }
     if(todoText){
