@@ -13,8 +13,8 @@ async function products(){
     const day = date.getDate()
     
     
-    
     localStorage.setItem("getdata", JSON.stringify(data))
+    
     const lagretidag = document.querySelector('.lagretidag')
     Object.entries(data).forEach(([key, value]) => 
         lagretidag.innerHTML += `
@@ -64,21 +64,71 @@ function change1(){
 const form = document.getElementById('form')
 const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
+const todo2 = document.querySelector('.todo2')
 
 const todos = JSON.parse(localStorage.getItem('todos'))
 if(todos){
     todos.forEach(todo => addTodo(todo))
 }
 
+async function renderTodo(){
+  try{
+    const baseURL = 'https://todoparon-default-rtdb.europe-west1.firebasedatabase.app/'
+    const url = baseURL + 'todo.json'
+    const response = await fetch(url)
+    let data = await response.json()
+    console.log(data)
+
+    Object.entries(data).forEach(([key, value]) => 
+      todo2.innerHTML += `
+      <p>${key}</p>` 
+    )
+  }catch(error){
+    console.log(error)
+  }
+
+  }
+renderTodo()
+async function addTodoToFirebase() {
+  try {
+    const baseURL = 'https://todoparon-default-rtdb.europe-west1.firebasedatabase.app/'
+    const url = baseURL + 'todo.json'
+    const response = await fetch(url)
+    let data = await response.json()
+    console.log(data)
+
+
+    // Send the updated data back to Firebase
+    const updateResponse = await fetch(url, {
+      method: 'PUT', 
+      body: input,
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+
+    if (updateResponse.ok) {
+      console.log('Data updated successfully in Firebase!');
+    } else {
+      console.error('Failed to update data in Firebase.');
+    }
+  } catch (error) {
+    console.error('Error while updating data:', error);
+  }
+}
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     addTodo() 
+    addTodoToFirebase()
+    
 })
 function addTodo(todo){
     let todoText = input.value 
     if(todo){
         todoText = todo.text
+        
     }
     if(todoText){
         const todoEl = document.createElement('li')
@@ -102,6 +152,7 @@ function addTodo(todo){
         input.value = ''
 
         updateLS()
+       
     }
 }
 function updateLS(){
@@ -115,7 +166,10 @@ function updateLS(){
         })
     })
     localStorage.setItem('todos', JSON.stringify(todos))
+    
 }
+
+
 
 
 
