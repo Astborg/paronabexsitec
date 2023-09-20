@@ -82,7 +82,7 @@ async function renderTodo(){
 
     Object.entries(data).forEach(([key, value]) => 
       todo2.innerHTML += `
-      <p>${key}</p>` 
+      <p>${value}</p>` 
     )
   }catch(error){
     console.log(error)
@@ -92,20 +92,24 @@ async function renderTodo(){
 renderTodo()
 async function addTodoToFirebase() {
   try {
+    const input = document.getElementById('input').value
+    
+    
+  
     const baseURL = 'https://todoparon-default-rtdb.europe-west1.firebasedatabase.app/'
     const url = baseURL + 'todo.json'
     const response = await fetch(url)
     console.log(response)
     let data = await response.json()
     console.log(data)
-   console.log(input.value)
-    
+   console.log(input)
+   
     
 
     // Send the updated data back to Firebase
     const updateResponse = await fetch(url, {
-      method: 'PUT', 
-      body: JSON.stringify(input.value),
+      method: 'POST', 
+      body: JSON.stringify(input),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -124,8 +128,9 @@ async function addTodoToFirebase() {
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    addTodo() 
     addTodoToFirebase()
+    addTodo() 
+    
     
 })
 function addTodo(todo){
