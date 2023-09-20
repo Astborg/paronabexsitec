@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/style/style.css">
     <title>PäronAB</title>
 </head>
+
 <body>
     <div class="square">
-    
+
         <picture>
-            <source media="(min-width:751px)" srcset="https://i.pinimg.com/originals/39/fd/b5/39fdb53d85e60a2ee796a534eaedbb91.png">
-        
+            <source media="(min-width:751px)"
+                srcset="https://i.pinimg.com/originals/39/fd/b5/39fdb53d85e60a2ee796a534eaedbb91.png">
+
             <img>
         </picture>
-    
-        <div class="cart"><a href="/modules/cart.html"><i class="fa fa-list-ol"></i></a><div class="lang1"></div></div>
-        
-        <div> 
-            <ul class="menu hidden" id="menu" >
+
+        <div class="cart"><a href="/modules/cart.html"><i class="fa fa-list-ol"></i></a>
+            <div class="lang1"></div>
+        </div>
+
+        <div>
+            <ul class="menu hidden" id="menu">
                 <p id="home"><a id="home" href="index.html">Hem</a></p>
             </ul>
         </div>
@@ -30,57 +37,69 @@
 
 
         </div>
-        <div class="grid"  id="container">
-      <div class="div-container">
-                <div class="image"><img class="skor-img" src="https://files.refurbed.com/ii/microsoft-surface-pro-2017-i5-73-1650447076.jpg?t=fitdesign&h=600&w=800" alt=""></div>
+        <div class="grid" id="container">
+            <div class="div-container">
+                <div class="image"><img class="skor-img"
+                        src="https://files.refurbed.com/ii/microsoft-surface-pro-2017-i5-73-1650447076.jpg?t=fitdesign&h=600&w=800"
+                        alt=""></div>
                 <div class="beskrivning"><strong class="text">Ändra i lagret</strong><br>
-                    <br><p class="text2">Fyll i fälten och lägg den valda produkten i listan. Tryck på knappen lägg till i listan. Tryck sedan på listan uppe i vänstra hörnet för att gå vidare.</p></div>
+                    <br>
+                    <p class="text2">Fyll i fälten och lägg den valda produkten i listan. Tryck på knappen lägg till i
+                        listan. Tryck sedan på listan uppe i vänstra hörnet för att gå vidare.</p>
+                </div>
                 <div class="pris">
 
-                <div><label for="tabort">Ta bort</label>
-                <input class="input1" type="number"></div>
-               <div><label for="läggtill">Lägg till</label>
-                <input class="input2" type="number"></div>
-                <label for="">Stad</label>
-                <div class="select"><Select id="select">
-                    <option value="Norrköping">Norrköping</option>
-                    <option value="Cupertino">Cupertino</option>
-                    <option value="Frankfurt">Frankfurt</option>
-                </Select></div>
-                <label for="">Produkt</label>
-                <div class="select2"><Select id="select2">
-                    <option value="Platta">jPlatta</option>
-                    <option value="Telefon">jTelefon</option>
-                    <option value="Klocka">Päronklocka</option>
-                </Select></div>
-                <button class="euro" onclick="change1()">Lägg i listan</button>
+                    <div><label for="tabort">Ta bort</label>
+                        <input class="input1" type="number">
+                    </div>
+                    <div><label for="läggtill">Lägg till</label>
+                        <input class="input2" type="number">
+                    </div>
+                    <label for="">Stad</label>
+                    <div class="select"><Select id="select">
+                            <option value="Norrköping">Norrköping</option>
+                            <option value="Cupertino">Cupertino</option>
+                            <option value="Frankfurt">Frankfurt</option>
+                        </Select></div>
+                    <label for="">Produkt</label>
+                    <div class="select2"><Select id="select2">
+                            <option value="Platta">jPlatta</option>
+                            <option value="Telefon">jTelefon</option>
+                            <option value="Klocka">Päronklocka</option>
+                        </Select></div>
+                    <button class="euro" onclick="change1()">Lägg i listan</button>
                 </div>
             </div>
-         
+
             <div class="inochutleverans">
-            <div class="todo15"><p >In och ut leverans</p></div>
-            <div class="todo2">
-                
-            
+                <div class="todo15">
+                    <p>In och ut leverans</p>
+                </div>
+                <div class="todo2">
+
+
+                </div>
             </div>
-        </div>
-    <div class="todos">
-        <h3>Rapport</h3>
-    <form id="form">
-    <input type="text" class="input" id="input"
-    placeholder="Leverans att göra" autocomplete="off">
-    <ul class="todos" id="todos">
-    </ul>
-   
-</form>
+            <div class="todos">
+                <h3>Rapport</h3>
+                <form id="form">
+                    <input type="text" class="input" id="input" placeholder="Leverans att göra" autocomplete="off">
+                    <ul class="todos" id="todos">
+                    </ul>
+
+                </form>
 
 <small class="small">Left click to toggle completed <br> Right click to delete Todo</small>
+</div>
+<div class="footer">
+    <div>copyright<i class="fa-regular fa-copyright"></i>
+        <p>Päron AB</p>
     </div>
-    <div class="footer">
-        <div>copyright<i class="fa-regular fa-copyright"></i><p>Päron AB</p></div>
-        <br>
-        <div><p>info@päronab.se</p></div>
+    <br>
+    <div>
+        <p>info@päronab.se</p>
     </div>
-    <script src="main.js"></script>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
