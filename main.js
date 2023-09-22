@@ -37,7 +37,13 @@ products();
 
 //Hämta värden från ifyllda fält och spara i localStorage
 const euro = document.querySelectorAll(".euro");
+const eurobtn = document.querySelector('.eurobtn')
+eurobtn.disabled = true
 function change1() {
+  alert('Tryck på fortsätt knappen och du fortsätter på nästa sida för att ändra i lagret')
+  if(alert){
+    eurobtn.disabled = false
+  }
   const input1 = document.querySelector(".input1").value;
   const input2 = document.querySelector(".input2").value;
   const select = document.getElementById("select").value;
@@ -53,6 +59,10 @@ function change1() {
   localStorage.setItem("select", select);
   localStorage.setItem("input2", input2);
   localStorage.setItem("input1", input1);
+
+  document.querySelector(".eurobtn").onclick = function () {
+    location.href = "/modules/cart.html";
+};
 }
 
 // todo code
