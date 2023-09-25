@@ -38,6 +38,8 @@ const newInput1 = JSON.parse(input1);
 
 //Skicka ändringar till Firebase
 function checkout() {
+  const paragraf = document.querySelector('.paragraf')
+  paragraf.innerText = 'Dina ändringar är nu gjorda! Tryck tillbaka för att se lagerändringarna.'
   async function updateSelectValue() {
     try {
       const baseURL =

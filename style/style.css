@@ -8,6 +8,7 @@
     margin: auto;
     padding-bottom: 2vw;  
 }
+
 ul{
     display: block;
 }
@@ -70,8 +71,13 @@ img{
     width: 7vw;
     border-radius: 50%; 
     margin-top: 2vw;
-    margin-left: 2vw; 
+    margin-left: 0vw; 
     transition-duration: 0.5s  
+}
+.logo{
+    margin-left: 10px; 
+    font-weight: bold; 
+    font-size: 25px; 
 }
 img:hover{
     transform: rotate(360deg)
@@ -115,14 +121,14 @@ img:hover{
 }
 .pris{
     width: 26vw; 
-    height: 20vw; 
+    height: 70vw; 
     padding: 1vw; 
     background-color: rgba(255, 255, 255, 0.708);
     border-radius: 0.8vw;
     margin-right: 0.5vw;
     
 }
-.euro{
+.euro, .btn1, .btn2{
     width: 8vw; 
     border-radius: 0.7vw;
     border: none; 
@@ -131,7 +137,7 @@ img:hover{
     color: white; 
     float: right; 
     margin-right: 6vw; 
-    margin-top: 5vw; 
+    margin-top: 2vw; 
     cursor: pointer; 
     font-weight: bold;  
 }
@@ -217,12 +223,13 @@ p{
 }
 
 .input1, .input2{
-    width: 200px; 
+    width: 100%; 
     border-radius: 5px; 
-    padding: 5px; 
-    border-color: rgb(187, 185, 185);
+    padding: 5px;
+    border-color: rgb(11, 156, 11);
     margin-bottom: 5px; 
 }
+
 .lagretidag{
     background-color: white; 
     display: flex; 
@@ -239,20 +246,29 @@ p{
 .idag{
     margin: 5px; 
 }
-.select, .select1, select{
+select{
     display: flex;
     flex-direction: row; 
     padding: 5px; 
-    width: 200px; 
+    width: 100%; 
     border-radius: 5px; 
-    border-color: rgb(187, 185, 185);
+    border-color: rgb(11, 156, 11);
     margin-bottom: 5px; 
+    
 }
+
+label{
+    padding: 0; 
+}
+select:active{
+    border-color: rgb(11, 156, 11);
+}
+
 
 .pris{
     
     box-shadow: 2px 2px 2px 2px rgb(221, 220, 220);
-    height:40vh
+    height:50vh
 }
 
 label{
@@ -279,10 +295,14 @@ label{
     from {top: 0vw;}
     to {top: 4vw;}
   }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 820px){
     .square{
         height: 100%; 
         padding-bottom: 4vw; 
+    }
+
+    .idag{
+        font-size: 2.5vw; 
     }
     .menu{
         display: flex; 
@@ -343,9 +363,7 @@ label{
         display: flex;
         flex-direction: column; 
         justify-content: center; 
-       
-        
-         
+           
     }
     
     .image{
@@ -368,14 +386,18 @@ label{
     .pris{
         position: relative; 
         display: flex; 
-        width: 76.5vw;
+        width: 79vw;
         height: 75vw; 
         flex-direction: column; 
         padding-bottom: 7.5vw;
         margin: 0.6vw;
         margin-bottom: 2vw; 
         text-align: center;
-        font-size: 3vw;   
+        font-size: 3vw; 
+        box-shadow: none;   
+    }
+    .inochutleverans{
+        box-shadow: none; 
     }
     .euro{
         position: absolute;
@@ -383,6 +405,12 @@ label{
         height: 7vw;  
         margin-right: 0.5vw; 
         margin-top: 55vw;
+    }
+    .todos h3 {
+        font-size:x-large;
+    }
+    .text{
+        font-size:large; 
     }
     .eurobtn{
         position: absolute;
@@ -392,8 +420,9 @@ label{
         margin-top: 65vw;
     }
     
-    .text{
-        font-size: 2.5vw;
+    .input::placeholder{
+        font-size: large;
+        text-align: center; 
         
     }
     .text2{
@@ -401,8 +430,11 @@ label{
     }
     .footer{
         margin-top: 20vw; 
-        height: 20vw; 
+        height: 30vw; 
         padding-bottom: 2vw; 
+    }
+    .footer div, p{
+        font-size:small
     }
     .btn1{
         margin-bottom: 20vw; 
